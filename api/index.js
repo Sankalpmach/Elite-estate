@@ -6,9 +6,9 @@ import authRouter from "./routes/auth.route.js";
 import cookieParser from "cookie-parser";
 
 dotenv.config();
-
+const uri = "mongodb+srv://sankalppatil619:wadProject@cluster0.qdjydoz.mongodb.net/WadProjectretryWrites=true&w=majority&appName=Cluster0"; //Make ur own cluster on mongodb
 mongoose
-  .connect(process.env.MONGO)
+  .connect(uri)
   .then(() => {
     console.log("connected to mongo congrates");
   })
